@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Os Impactos do Agronegócio no Meio Ambiente</title>
+<meta name="description" content="Site informativo sobre os impactos do agronegócio no meio ambiente: desmatamento, agrotóxicos, água e soluções sustentáveis." />
+<style>
+  :root{
+    --bg:#f7faf5; --fg:#1b2a1f; --muted:#5b6b5f; --border:#e2e8dd;
+    --card:#ffffff; --primary:#2f6b3e; --primary-fg:#f5faf2;
+    --secondary:#eaf1e5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1024px;margin:0 auto;padding:0 24px}
+  nav{position:sticky;top:0;z-index:50;background:rgba(247,250,245,.8);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  nav .row{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .brand{display:flex;align-items:center;gap:8px;font-weight:600;letter-spacing:-.01em}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--primary)}
+  .navlinks{display:none;gap:24px;font-size:14px;color:var(--muted)}
+  .navlinks a:hover{color:var(--fg)}
+  @media(min-width:768px){.navlinks{display:flex}}
+  header{border-bottom:1px solid var(--border)}
+  header .inner{padding:96px 0}
+  .kicker{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+  .kicker .line{width:32px;height:1px;background:var(--primary)}
+  h1{font-size:clamp(36px,6vw,64px);font-weight:600;letter-spacing:-.02em;line-height:1.05;max-width:780px}
+  .lead{margin-top:24px;max-width:640px;font-size:18px;color:var(--muted);line-height:1.65}
+  .cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:9999px;font-size:14px;font-weight:500;transition:.2s}
+  .btn-primary{background:var(--primary);color:var(--primary-fg)}
+  .btn-primary:hover{opacity:.9}
+  .btn-outline{border:1px solid var(--border);background:transparent}
+  .btn-outline:hover{background:var(--secondary)}
+  section{padding:80px 0;border-bottom:1px solid var(--border)}
+  section:last-of-type{border-bottom:0}
+  .two-col{display:grid;grid-template-columns:1fr;gap:40px}
+  @media(min-width:768px){.two-col{grid-template-columns:1fr 2fr}}
+  .section-label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .section-title{font-size:clamp(22px,3vw,32px);font-weight:500;letter-spacing:-.01em;line-height:1.3}
+  .prose p{font-size:18px;line-height:1.7}
+  .prose p+p{margin-top:16px;color:var(--muted)}
+  .impactos{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-top:48px}
+  @media(min-width:640px){.impactos{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.impactos{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--card);padding:32px;display:flex;flex-direction:column;gap:16px;transition:background.2s}
+  .card:hover{background:#f1f6ee}
+  .card .ico{width:32px;height:32px;border-radius:8px;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:18px}
+  .card h3{font-size:18px;font-weight:600;letter-spacing:-.01em}
+  .card p{font-size:14px;color:var(--muted);line-height:1.65}
+  ol.solutions{list-style:none}
+  ol.solutions li{display:flex;gap:24px;padding:24px 0;border-bottom:1px solid var(--border)}
+  ol.solutions li:last-child{border-bottom:0}
+  ol.solutions .num{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:4px}
+  ol.solutions h3{font-size:18px;font-weight:500}
+  ol.solutions p{color:var(--muted);margin-top:4px}
+  .stats{display:grid;grid-template-columns:1fr;gap:24px;margin-top:48px}
+  @media(min-width:640px){.stats{grid-template-columns:repeat(3,1fr)}}
+  .stat{border:1px solid var(--border);border-radius:12px;padding:32px;background:var(--card)}
+  .stat .big{font-size:clamp(28px,4vw,36px);font-weight:600;letter-spacing:-.01em;color:var(--primary)}
+  .stat p{margin-top:12px;font-size:14px;color:var(--muted);line-height:1.65}
+  footer{border-top:1px solid var(--border)}
+  footer .row{display:flex;flex-direction:column;gap:16px;padding:40px 0;font-size:14px;color:var(--muted)}
+  @media(min-width:768px){footer .row{flex-direction:row;justify-content:space-between;align-items:center}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container row">
+    
+    <div class="navlinks">
+      <a href="#sobre">Sobre</a>
+      <a href="#impactos">Impactos</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#dados">Dados</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container inner">
+    <span class="kicker"><span class="line"></span>Meio Ambiente</span>
+    <h1>Os impactos do agronegócio no meio ambiente.</h1>
+    <p class="lead">O agronegócio movimenta a economia do Brasil, mas também transforma profundamente os ecossistemas. Entenda como essa atividade afeta o planeta — e o que pode ser feito para reduzir seus efeitos.</p>
+    <div class="cta">
+      <a href="#impactos" class="btn btn-primary">Ver impactos</a>
+      <a href="#solucoes" class="btn btn-outline">Soluções possíveis</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="sobre" class="two-col">
+    <h2 class="section-label">01 — Introdução</h2>
+    <div class="prose">
+      <p>O <strong>agronegócio</strong> é o conjunto de atividades ligadas à produção agrícola e pecuária, desde o plantio e a criação de animais até a industrialização e comercialização dos produtos.</p>
+      <p>No Brasil, ele representa uma parcela significativa do PIB e das exportações. Por outro lado, sua expansão tem consequências ambientais que afetam o clima, os recursos hídricos e a biodiversidade do país.</p>
+    </div>
+  </section>
+
+  <section id="impactos">
+    <div class="two-col">
+      <h2 class="section-label">02 — Principais impactos</h2>
+      <p class="section-title">Seis efeitos diretos do modelo agropecuário atual sobre o meio ambiente.</p>
+    </div>
+    <div class="impactos">
+      <article class="card"><div class="ico">🌳</div><h3>Desmatamento</h3><p>Grandes áreas de floresta são derrubadas para abrir espaço para plantações e pastagens, reduzindo a cobertura vegetal nativa.</p></article>
+      <article class="card"><div class="ico">🐝</div><h3>Uso de agrotóxicos</h3><p>Produtos químicos contaminam o solo e a água, afetam a saúde humana e prejudicam abelhas e outros polinizadores.</p></article>
+      <article class="card"><div class="ico">💧</div><h3>Poluição da água</h3><p>Resíduos de fertilizantes e defensivos chegam a rios e lençóis freáticos, comprometendo a qualidade da água.</p></article>
+      <article class="card"><div class="ico">🏭</div><h3>Gases de efeito estufa</h3><p>A pecuária intensiva e o uso de maquinário liberam metano e CO₂, contribuindo para o aquecimento global.</p></article>
+      <article class="card"><div class="ico">🍃</div><h3>Perda de biodiversidade</h3><p>A expansão das monoculturas reduz habitats e ameaça diversas espécies de plantas e animais.</p></article>
+      <article class="card"><div class="ico">🌱</div><h3>Degradação do solo</h3><p>O uso intensivo da terra empobrece o solo, diminuindo sua fertilidade e capacidade de regeneração.</p></article>
+    </div>
+  </section>
+
+  <section id="solucoes" class="two-col">
+    <h2 class="section-label">03 — Caminhos sustentáveis</h2>
+    <ol class="solutions">
+      <li><span class="num">01</span><div><h3>Agricultura regenerativa</h3><p>Práticas que recuperam o solo e aumentam a biodiversidade local.</p></div></li>
+      <li><span class="num">02</span><div><h3>Reflorestamento</h3><p>Recuperar áreas degradadas com espécies nativas, reconectando ecossistemas.</p></div></li>
+      <li><span class="num">03</span><div><h3>Redução de agrotóxicos</h3><p>Adoção de manejo integrado de pragas e alternativas biológicas.</p></div></li>
+      <li><span class="num">04</span><div><h3>Pecuária de baixo carbono</h3><p>Sistemas integrados de lavoura, pecuária e floresta para reduzir emissões.</p></div></li>
+      <li><span class="num">05</span><div><h3>Apoio a pequenos produtores</h3><p>Valorizar quem produz alimentos respeitando o meio ambiente.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="dados">
+    <div class="two-col">
+      <h2 class="section-label">04 — Em números</h2>
+      <p class="section-title">O Brasil é um dos maiores produtores agropecuários do mundo — e também um dos países que mais desmatam.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="big">~25%</div><p>do PIB brasileiro vem do agronegócio</p></div>
+      <div class="stat"><div class="big">+11.000 km²</div><p>de floresta amazônica perdidos por ano</p></div>
+      <div class="stat"><div class="big">3º lugar</div><p>maior consumidor mundial de agrotóxicos</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container row">
+  </div>
+</footer>
+
+</body>
+</html>
